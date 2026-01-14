@@ -32,8 +32,8 @@ export default function Navbar() {
                         Về BizTada
                     </a>
 
-                    {/* 👇 NÚT ĐÃ SỬA */}
-                    <button className="relative group overflow-hidden rounded-full font-bold text-sm text-white hover:text-slate-900 shadow-[0_0_20px_rgba(236,72,153,0.4)] hover:shadow-[0_0_30px_rgba(236,72,153,0.6)] transition-all duration-300">
+                    {/* 👇 NÚT ĐÃ SỬA: Thêm hover:shadow-none */}
+                    <button className="relative group overflow-hidden rounded-full font-bold text-sm text-white hover:text-slate-900 shadow-[0_0_20px_rgba(236,72,153,0.4)] hover:shadow-none transition-all duration-300">
 
                         {/* Lớp nền: Đổi từ gradient cyan sang trắng khi hover */}
                         <div className="absolute inset-0 bg-cyan-500 group-hover:bg-white transition-colors duration-300"></div>
