@@ -86,19 +86,14 @@ export default function HeroSection() {
 
 
                     {/* Tiêu đề */}
-                    <h1 className={`delay-200 text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-white mb-6 leading-normal tracking-wide drop-shadow-2xl animate-float-slow font-galvani`}>
+                    <h1 className={`delay-200 text-5xl md:text-5xl lg:text-5xl xl:text-6xl text-white mb-6 leading-normal tracking-wide drop-shadow-2xl animate-float-slow font-galvani`}>
 
-                        {/* 👇 1. Bao bọc dòng trên bằng thẻ span có gradient */}
-                        {/* Mình dùng gradient từ Cyan -> Blue -> Purple để tạo sự khác biệt nhẹ với dòng dưới */}
+
                         <span className="bg-gradient-to-r from-cyan-300 via-blue-400 to-purple-400 bg-clip-text text-transparent animate-text-shimmer">
-                            AI
-                            {/* 👇 2. ĐÃ XÓA 'text-cyan-400' ở đây để dấu & ăn theo gradient chung */}
-                            <span className="mx-2 font-sans font-light">&amp;</span>
-                            AUTOMATION SOLUTIONS
+                            AI AND AUTOMATION SOLUTIONS
                         </span>
 
                         <br />
-
                         {/* Dòng dưới giữ nguyên */}
                         <span className="inline-block mt-2 bg-gradient-to-r from-pink-300 via-purple-300 to-cyan-300 bg-clip-text text-transparent drop-shadow-[0_0_25px_rgba(168,85,247,0.5)] animate-text-shimmer">
                             FOR BUSINESSES
