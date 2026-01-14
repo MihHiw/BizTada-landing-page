@@ -17,7 +17,6 @@ export default function AIForm() {
             <div className="relative z-10 w-full flex justify-center mt-10 md:mt-28">
                 <Form
                     onSubmitSuccess={handleSaveData}
-                    // Shadow nhẹ để tách biệt Form khỏi nền
                     className="shadow-[0_0_50px_rgba(56,189,248,0.2)]"
                 />
             </div>

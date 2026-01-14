@@ -1,8 +1,7 @@
 "use client";
 
-import Link from "next/link";
-// 👇 1. Import Image component
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Navbar() {
     return (
@@ -11,13 +10,12 @@ export default function Navbar() {
                 <Link href="/" className="flex items-center gap-3 group">
                     <div className="relative flex items-center justify-center">
                         {/* Glow effect */}
-                        <div className="absolute inset-0 bg-fuchsia-500 blur-2xl opacity-20 rounded-full group-hover:opacity-50 transition-opacity"></div>
-                        <div className="relative h-24 w-56">
+                        <div className="absolute inset-7 bg-fuchsia-200 blur-2xl opacity-10 rounded-full group-hover:opacity-50 transition-opacity"></div>
+                        <div className="relative h-24 w-48">
                             <Image
                                 src="/image/logo.png"
                                 alt="BizTada Logo"
                                 fill
-                                // 👇 2. Thêm 'object-left' để logo luôn căn trái (không bị trôi ra giữa nếu khung quá rộng)
                                 className="object-contain object-left brightness-0 invert drop-shadow-lg"
                                 priority
                                 sizes="(max-width: 768px) 100vw, 33vw"
@@ -34,8 +32,13 @@ export default function Navbar() {
                         Về BizTada
                     </a>
 
-                    <button className="relative group overflow-hidden rounded-full font-bold text-sm text-white shadow-[0_0_20px_rgba(236,72,153,0.4)] hover:shadow-[0_0_30px_rgba(236,72,153,0.6)] transition-all">
-                        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-cyan-500 group-hover:opacity-90 transition-opacity"></div>
+                    {/* 👇 NÚT ĐÃ SỬA */}
+                    <button className="relative group overflow-hidden rounded-full font-bold text-sm text-white hover:text-slate-900 shadow-[0_0_20px_rgba(236,72,153,0.4)] hover:shadow-[0_0_30px_rgba(236,72,153,0.6)] transition-all duration-300">
+
+                        {/* Lớp nền: Đổi từ gradient cyan sang trắng khi hover */}
+                        <div className="absolute inset-0 bg-cyan-500 group-hover:bg-white transition-colors duration-300"></div>
+
+                        {/* Nội dung nút */}
                         <span className="relative z-10 block px-6 py-2.5">
                             Tư vấn ngay
                         </span>

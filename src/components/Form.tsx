@@ -175,7 +175,7 @@ export default function OnboardingForm({ onSubmitSuccess, className = "" }: Form
     <div className={`w-full max-w-4xl mx-auto bg-[#111827] border border-slate-800 rounded-2xl shadow-2xl overflow-hidden flex flex-col md:flex-row min-h-[600px] ${className}`}>
 
       {/* SIDEBAR DESKTOP */}
-      <div className="hidden md:flex w-1/3 bg-slate-900/50 border-r border-slate-800 p-6 flex-col">
+      <div className="hidden md:flex w-1/3 bg-slate-900/50 border-r border-slate-800 p-6 flex-col mt-4 md:mt-4">
         <div className="mb-8">
           <h2 className="text-2xl font-bold text-white mb-2 tracking-tight ">Thiết lập hồ sơ</h2>
           <p className="text-sm text-slate-400 leading-relaxed">Dữ liệu này giúp AI xây dựng chiến dịch chính xác nhất.</p>

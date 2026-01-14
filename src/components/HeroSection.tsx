@@ -1,9 +1,8 @@
 "use client";
 
+import Navbar from "@/components/Navbar";
 import { Inter, JetBrains_Mono, Space_Grotesk } from "next/font/google";
 import { useEffect, useState } from "react";
-// 👇 1. Import Navbar từ file components
-import Navbar from "@/components/Navbar";
 
 const spaceGrotesk = Space_Grotesk({ subsets: ["latin", "vietnamese"] });
 const jetbrainsMono = JetBrains_Mono({ subsets: ["latin", "vietnamese"] });
@@ -27,9 +26,8 @@ export default function HeroSection() {
     };
 
     return (
-        <section className="relative w-full h-screen flex flex-col items-center justify-center bg-transparent px-4">
+        <section className="relative w-full h-screen flex flex-col items-center justify-center bg-transparent px-4 pt-32">
 
-            {/* 👇 2. Thêm Navbar vào đây (Nó sẽ tự nổi lên trên cùng nhờ class 'fixed' trong file Navbar) */}
             <Navbar />
 
             <style jsx>{`
@@ -84,31 +82,23 @@ export default function HeroSection() {
                         </span>
                     </div>
 
-
                     {/* Tiêu đề */}
-                    <h1 className={`delay-200 text-5xl md:text-5xl lg:text-5xl xl:text-6xl text-white mb-6 leading-normal tracking-wide drop-shadow-2xl animate-float-slow font-galvani`}>
-
-
+                    <h1 className={`delay-200 text-4xl md:text-5xl lg:text-5xl xl:text-[84px] text-white mb-6 leading-normal tracking-wide drop-shadow-2xl animate-float-slow font-bold font-galvani`}>
                         <span className="bg-gradient-to-r from-cyan-300 via-blue-400 to-purple-400 bg-clip-text text-transparent animate-text-shimmer">
                             AI AND AUTOMATION SOLUTIONS
                         </span>
-
                         <br />
-                        {/* Dòng dưới giữ nguyên */}
                         <span className="inline-block mt-2 bg-gradient-to-r from-pink-300 via-purple-300 to-cyan-300 bg-clip-text text-transparent drop-shadow-[0_0_25px_rgba(168,85,247,0.5)] animate-text-shimmer">
                             FOR BUSINESSES
                         </span>
                     </h1>
 
-                    <p className={`delay-300 max-w-2xl mx-auto text-blue-100 mb-10 text-lg md:text-xl font-light leading-relaxed tracking-wide ${inter.className}`}>
-                        Bằng những
-                        <span className={`mx-2 text-white font-bold bg-gradient-to-r from-blue-600/40 to-cyan-600/40 px-2 py-0.5 rounded border border-cyan-400/40 inline-block animate-code-pulse ${jetbrainsMono.className}`}>
-                            &lt;AI_Technology /&gt;
-                        </span>
-                        tiên tiến, BizTada mang đến trải nghiệm làm đẹp an toàn và thông minh.
+                    <p className={`delay-300 max-w-5xl mx-auto text-blue-100 mb-10 text-[16px] md:text-3xl font-light leading-relaxed tracking-wide ${inter.className}`}>
+                        Bằng những công nghệ AI
+                        tiên tiến, BizTada mang đến trải nghiệm an toàn và thông minh cho doanh nghiệp.
                     </p>
 
-                    <div className="delay-400">
+                    <div className="delay-400 mt-32">
                         <button onClick={scrollToForm} className={`group relative px-10 py-4 rounded-full font-bold text-lg transition-all duration-300 hover:scale-105 hover:shadow-[0_0_60px_rgba(56,189,248,0.6)] ${spaceGrotesk.className}`}>
                             <div className="absolute inset-0 bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 rounded-full opacity-70 blur-md group-hover:opacity-100 transition-opacity animate-pulse"></div>
                             <div className="absolute inset-[2px] bg-gradient-to-r from-blue-600 to-blue-600 rounded-full z-10"></div>
