@@ -10,14 +10,13 @@ export default function Home() {
         <>
             <Head>
                 <title>BizTada - Giải pháp AI cho Doanh nghiệp</title>
-                <meta name="description" content="BizTada" />
+                <meta name="description" content="BizTada AI Solutions" />
             </Head>
 
-            {/* --- 1. GLOBAL BACKGROUND (NỀN VŨ TRỤ CỐ ĐỊNH) --- */}
-            {/* z-[-1] để nó nằm dưới cùng. fixed để nó đứng yên khi cuộn */}
+            {/* === 1. GLOBAL BACKGROUND (NỀN CỐ ĐỊNH DUY NHẤT) === */}
             <div className="fixed inset-0 z-[-1] overflow-hidden bg-gradient-to-tr from-slate-900 via-indigo-900 to-blue-900">
 
-                {/* Style Animation dùng chung cho toàn trang */}
+                {/* Animation Styles */}
                 <style jsx global>{`
                     @keyframes grid-move { 0% { transform: translateY(0); } 100% { transform: translateY(40px); } }
                     @keyframes blob-bounce { 0% { transform: translate(0, 0) scale(1); } 33% { transform: translate(30px, -50px) scale(1.1); } 66% { transform: translate(-20px, 20px) scale(0.9); } 100% { transform: translate(0, 0) scale(1); } }
@@ -28,11 +27,11 @@ export default function Home() {
                 `}</style>
 
                 {/* Blobs (Đốm sáng) */}
-                <div className="absolute top-[-10%] left-[-10%] w-[600px] h-[600px] bg-fuchsia-500/30 rounded-full blur-[120px] mix-blend-screen animate-blob-1 opacity-60"></div>
+                <div className="absolute top-[-10%] left-[-10%] w-[600px] h-[600px] bg-blue-500/30 rounded-full blur-[120px] mix-blend-screen animate-blob-1 opacity-60"></div>
                 <div className="absolute bottom-[-10%] right-[-10%] w-[600px] h-[600px] bg-cyan-400/30 rounded-full blur-[120px] mix-blend-screen animate-blob-2 opacity-60"></div>
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-purple-500/30 rounded-full blur-[100px] mix-blend-screen animate-blob-3"></div>
 
-                {/* Grid (Lưới) */}
+                {/* Grid (Lưới) chạy toàn màn hình */}
                 <div className="absolute inset-0 overflow-hidden opacity-[0.2]">
                     <div className="absolute -top-[40px] left-0 right-0 bottom-[-40px] animate-grid"
                         style={{
@@ -44,8 +43,8 @@ export default function Home() {
                 </div>
             </div>
 
-            {/* --- 2. NỘI DUNG CHÍNH (TRONG SUỐT) --- */}
-            <main className="relative w-full">
+            {/* === 2. NỘI DUNG CHÍNH (TRONG SUỐT) === */}
+            <main className="relative w-full text-white">
                 <Navbar />
                 <HeroSection />
                 <div id="ai-form-section">

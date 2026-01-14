@@ -10,15 +10,14 @@ export default function AIForm() {
     };
 
     return (
-        // Xóa background màu, chỉ để flex container trong suốt
-        <div className="relative min-h-screen w-full flex items-center justify-center p-4 bg-transparent">
-
-            {/* XÓA: div chứa Grid và Blobs cũ ở đây vì đã có ở Page.tsx rồi */}
+        // QUAN TRỌNG: bg-transparent để nhìn xuyên thấu
+        <div className="relative min-h-screen w-full flex items-center justify-center p-4 overflow-hidden bg-transparent">
+            {/* Không còn layer background nào ở đây nữa */}
 
             <div className="relative z-10 w-full flex justify-center -mt-1 md:-mt-1">
                 <Form
                     onSubmitSuccess={handleSaveData}
-                    // Giữ shadow để Form nổi bật trên nền động
+                    // Shadow nhẹ để tách biệt Form khỏi nền
                     className="shadow-[0_0_50px_rgba(56,189,248,0.2)]"
                 />
             </div>
