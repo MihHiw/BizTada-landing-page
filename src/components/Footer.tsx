@@ -1,3 +1,6 @@
+"use client";
+
+// 👇 1. Import Image từ next/image
 import Image from "next/image";
 
 export default function Footer() {
@@ -6,20 +9,28 @@ export default function Footer() {
       <div className="container mx-auto px-6">
         <div className="flex flex-col md:flex-row justify-between items-center gap-6 md:gap-8">
 
-          {/* CỘT 1: Logo & Slogan ngắn gọn */}
+          {/* CỘT 1: Logo */}
           <div className="flex flex-col items-center md:items-start gap-2">
-            <div className="w-32 h-10 relative">
+
+            {/* 👇 2. SỬA LẠI: Dùng Next Image với fill */}
+            {/* Container: 
+                - h-12 (48px): Chiều cao cố định cho logo footer
+                - w-40 (160px): Chiều rộng đủ lớn để logo giãn ra (giữ tỉ lệ ngang)
+            */}
+            <div className="relative h-12 w-40">
               <Image
                 src="/image/logo.png"
                 alt="BizTada Logo"
-                fill
-                className="object-contain brightness-0 invert opacity-90"
+                fill // Tự động lấp đầy khung cha
+                // object-center cho mobile (căn giữa), md:object-left cho desktop (căn trái)
+                className="object-contain object-center md:object-left brightness-0 invert"
+                sizes="(max-width: 768px) 100vw, 20vw" // Tối ưu tải ảnh
               />
             </div>
-            <p className="text-xs text-gray-500">Giải pháp AI & Tự động hóa cho doanh nghiệp</p>
+
           </div>
 
-          {/* CỘT 2: Thông tin liên hệ (Gộp Lịch & Contact) */}
+          {/* CỘT 2: Thông tin liên hệ */}
           <div className="flex flex-col md:flex-row gap-6 md:gap-12 text-sm text-center md:text-left">
 
             {/* Lịch làm việc */}
@@ -33,10 +44,10 @@ export default function Footer() {
             <div>
               <h4 className="text-white font-semibold mb-1">Liên hệ</h4>
               <p className="mb-1">
-                Hotline/Zalo: <a href="tel:0899739739" className="text-blue-500 font-bold hover:text-blue-400">0899 739 739</a>
+                Hotline/Zalo: <a href="tel:0899739739" className="text-blue-500 font-bold hover:text-blue-400 transition-colors">0899 739 739</a>
               </p>
               <p>
-                Email: <a href="mailto:vanilla.tadabiz@gmail.com" className="hover:text-blue-400">vanilla.tadabiz@gmail.com</a>
+                Email: <a href="mailto:vanilla.tadabiz@gmail.com" className="hover:text-blue-400 transition-colors">vanilla.tadabiz@gmail.com</a>
               </p>
             </div>
 

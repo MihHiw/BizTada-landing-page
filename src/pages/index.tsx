@@ -2,7 +2,6 @@
 import AIForm from "@/components/AIForm";
 import Footer from "@/components/Footer";
 import HeroSection from "@/components/HeroSection";
-import Navbar from "@/components/Navbar";
 import Head from "next/head";
 
 export default function Home() {
@@ -43,15 +42,15 @@ export default function Home() {
                 </div>
             </div>
 
-            {/* === 2. NỘI DUNG CHÍNH (TRONG SUỐT) === */}
             <main className="relative w-full text-white">
-                <Navbar />
                 <HeroSection />
-                <div id="ai-form-section">
+                <div id="ai-form-section" className="">
                     <AIForm />
                 </div>
             </main>
-            <Footer />
+            <div className="mt-10">
+                <Footer />
+            </div>
         </>
     );
 }

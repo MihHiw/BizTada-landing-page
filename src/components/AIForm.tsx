@@ -14,7 +14,7 @@ export default function AIForm() {
         <div className="relative min-h-screen w-full flex items-center justify-center p-4 overflow-hidden bg-transparent">
             {/* Không còn layer background nào ở đây nữa */}
 
-            <div className="relative z-10 w-full flex justify-center -mt-1 md:-mt-1">
+            <div className="relative z-10 w-full flex justify-center mt-10 md:mt-28">
                 <Form
                     onSubmitSuccess={handleSaveData}
                     // Shadow nhẹ để tách biệt Form khỏi nền

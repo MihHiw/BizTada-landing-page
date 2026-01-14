@@ -8,6 +8,10 @@ const config: Config = {
         "./src/**/*.{js,ts,jsx,tsx,mdx}",],
     theme: {
         extend: {
+            fontFamily: {
+                galvani: ['var(--font-galvani)', 'sans-serif'],
+            },
+
             colors: {
                 primary: {
                     50: '#f0f9ff',

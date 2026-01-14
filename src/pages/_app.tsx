@@ -1,13 +1,18 @@
-import "@/styles/globals.css"; // Import CSS toàn cục tại đây
+import "@/styles/globals.css";
 import type { AppProps } from "next/app";
-import { Inter } from "next/font/google";
+import localFont from "next/font/local";
 
-// Cấu hình font Inter
-const inter = Inter({ subsets: ["latin"] });
+// 2. Cấu hình Font Galvani
+const galvani = localFont({
+    src: "../../public/fonts/Galvani.otf",
+    variable: "--font-galvani",
+    display: "swap",
+});
 
 export default function App({ Component, pageProps }: AppProps) {
     return (
-        <main className={inter.className}>
+        // 3. Thêm variable vào thẻ main bao quanh ứng dụng
+        <main className={`${galvani.variable} font-sans`}>
             <Component {...pageProps} />
         </main>
     );

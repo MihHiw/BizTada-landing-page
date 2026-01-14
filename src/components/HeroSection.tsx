@@ -2,6 +2,8 @@
 
 import { Inter, JetBrains_Mono, Space_Grotesk } from "next/font/google";
 import { useEffect, useState } from "react";
+// 👇 1. Import Navbar từ file components
+import Navbar from "@/components/Navbar";
 
 const spaceGrotesk = Space_Grotesk({ subsets: ["latin", "vietnamese"] });
 const jetbrainsMono = JetBrains_Mono({ subsets: ["latin", "vietnamese"] });
@@ -25,11 +27,13 @@ export default function HeroSection() {
     };
 
     return (
-        // QUAN TRỌNG: bg-transparent để nhìn xuyên thấu xuống page.tsx
         <section className="relative w-full h-screen flex flex-col items-center justify-center bg-transparent px-4">
 
+            {/* 👇 2. Thêm Navbar vào đây (Nó sẽ tự nổi lên trên cùng nhờ class 'fixed' trong file Navbar) */}
+            <Navbar />
+
             <style jsx>{`
-                /* Animation cũ giữ nguyên */
+                /* ... GIỮ NGUYÊN TOÀN BỘ STYLE CŨ ... */
                 @keyframes assemble-1 { 0% { transform: translate(-200px, -200px) rotate(-45deg); opacity: 0; color: #ff0055; } 50%, 100% { transform: translate(0, 0) rotate(0deg); opacity: 1; color: #fff; } }
                 @keyframes assemble-2 { 0% { transform: translate(0, -300px) scale(2); opacity: 0; color: #00ffcc; } 50%, 100% { transform: translate(0, 0) scale(1); opacity: 1; color: #fff; } }
                 @keyframes assemble-3 { 0% { transform: translate(200px, -200px) rotate(90deg); opacity: 0; color: #ffff00; } 50%, 100% { transform: translate(0, 0) rotate(0deg); opacity: 1; color: #fff; } }
@@ -57,7 +61,7 @@ export default function HeroSection() {
 
             {/* Màn hình chờ */}
             <div className={`fixed inset-0 z-[9999] bg-[#0f172a] flex flex-col items-center justify-center transition-all duration-1000 ${isLoaded ? 'opacity-0 pointer-events-none scale-110' : 'opacity-100'}`}>
-                <div className={`flex text-[60px] md:text-[90px] font-black mb-6 ${spaceGrotesk.className}`}>
+                <div className={`flex text-[60px] md:text-[90px] font-black mb-6 font-galvani`}>
                     <span className="l-1 inline-block text-white">B</span><span className="l-2 inline-block text-white">i</span><span className="l-3 inline-block text-white">z</span><span className="l-4 inline-block text-white">T</span><span className="l-5 inline-block text-white">a</span><span className="l-6 inline-block text-white">d</span><span className="l-7 inline-block text-white">a</span>
                 </div>
                 <div className={`loading-text text-xl font-bold tracking-[0.5em] text-cyan-400 ${jetbrainsMono.className}`}>
@@ -80,11 +84,24 @@ export default function HeroSection() {
                         </span>
                     </div>
 
-                    {/* Tiêu đề: Đã chỉnh size nhỏ hơn để vừa 1 dòng (text-5xl -> 7xl) */}
-                    <h1 className={`delay-200 text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-white mb-6 leading-tight tracking-tighter drop-shadow-2xl animate-float-slow ${spaceGrotesk.className}`}>
-                        AI SOLUTIONS&nbsp;
-                        <span className="bg-gradient-to-r from-pink-300 via-purple-300 to-cyan-300 bg-clip-text text-transparent drop-shadow-[0_0_25px_rgba(168,85,247,0.5)] animate-text-shimmer">
-                            FOR BUSINESS
+
+                    {/* Tiêu đề */}
+                    <h1 className={`delay-200 text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-white mb-6 leading-normal tracking-wide drop-shadow-2xl animate-float-slow font-galvani`}>
+
+                        {/* 👇 1. Bao bọc dòng trên bằng thẻ span có gradient */}
+                        {/* Mình dùng gradient từ Cyan -> Blue -> Purple để tạo sự khác biệt nhẹ với dòng dưới */}
+                        <span className="bg-gradient-to-r from-cyan-300 via-blue-400 to-purple-400 bg-clip-text text-transparent animate-text-shimmer">
+                            AI
+                            {/* 👇 2. ĐÃ XÓA 'text-cyan-400' ở đây để dấu & ăn theo gradient chung */}
+                            <span className="mx-2 font-sans font-light">&amp;</span>
+                            AUTOMATION SOLUTIONS
+                        </span>
+
+                        <br />
+
+                        {/* Dòng dưới giữ nguyên */}
+                        <span className="inline-block mt-2 bg-gradient-to-r from-pink-300 via-purple-300 to-cyan-300 bg-clip-text text-transparent drop-shadow-[0_0_25px_rgba(168,85,247,0.5)] animate-text-shimmer">
+                            FOR BUSINESSES
                         </span>
                     </h1>
 
