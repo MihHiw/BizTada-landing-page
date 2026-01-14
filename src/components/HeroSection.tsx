@@ -93,7 +93,7 @@ export default function HeroSection() {
                         </span>
                     </h1>
 
-                    <p className={`delay-300 max-w-5xl mx-auto text-blue-100 mb-10 text-[16px] md:text-3xl font-light leading-relaxed tracking-wide ${inter.className}`}>
+                    <p className={`delay-300 max-w-5xl mx-auto text-blue-100 mb-10 text-[16px] md:text-[22px] font-light leading-relaxed tracking-wide ${inter.className}`}>
                         Bằng những công nghệ AI
                         tiên tiến, BizTada mang đến trải nghiệm an toàn và thông minh cho doanh nghiệp.
                     </p>
