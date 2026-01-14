@@ -14,7 +14,7 @@ export default function Navbar() {
                             src="/image/logo.png"
                             alt="BizTada"
                             width={140}
-                            height={40}
+                            height={100}
                             className="h-12 w-auto object-contain relative z-10 brightness-0 invert"
                         />
                     </div>

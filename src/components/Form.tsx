@@ -269,7 +269,7 @@ export default function OnboardingForm({ onSubmitSuccess, className = "" }: Form
             {currentStep === 4 && (
               <div className="space-y-5 animate-in fade-in slide-in-from-bottom-4 duration-500">
                 <h3 className="text-xl font-semibold text-white">Chân dung & Vấn đề khách</h3>
-                <FormInput label="Độ tuổi khách hàng" id="targetAge" register={register} error={errors.targetAge} />
+                <FormInput label="Độ tuổi khách hàng" id="targetAge" register={register} error={errors.targetAge} placeholder='VD: 18-28 tuổi' />
                 <div className="space-y-1">
                   <label className="block text-sm text-slate-300">Vấn đề cốt lõi của khách hàng là gì?</label>
                   <textarea
